@@ -4,7 +4,11 @@ import { CommonModule } from '@angular/common';
 import { AuthRoutingModule } from './auth-routing.module';
 import { AuthComponent } from './auth.component';
 import { LoginComponent } from './login/login.component';
-import { NbButtonModule, NbCardModule, NbInputModule, NbLayoutModule } from '@nebular/theme';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -14,10 +18,11 @@ import { NbButtonModule, NbCardModule, NbInputModule, NbLayoutModule } from '@ne
   imports: [
     CommonModule,
     AuthRoutingModule,
-    NbLayoutModule,
-    NbCardModule,
-    NbInputModule,
-    NbButtonModule
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    FlexLayoutModule
   ],
   providers: [
 

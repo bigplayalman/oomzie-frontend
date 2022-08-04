@@ -1,9 +1,12 @@
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NbThemeModule } from '@nebular/theme';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 
 @NgModule({
   declarations: [
@@ -12,7 +15,9 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NbThemeModule.forRoot({name: 'dark'})
+    BrowserAnimationsModule,
+    FlexLayoutModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,24 +1,41 @@
-<form>
-  <nb-layout windowMode="true">
-    <nb-layout-column>
-      <img src="../../../assets/oomzie.png" class="responsive" />
-    </nb-layout-column>
-    <nb-layout-column class="login-inputs-container">
-      <input
-        type="text"
-        nbInput
-        fullWidth
-        fieldSize="large"
-        placeholder="email"
-      />
-      <input
-        type="password"
-        nbInput
-        fullWidth
-        fieldSize="large"
-        placeholder="password"
-      />
-      <button nbButton hero status="primary">Login</button>
-    </nb-layout-column>
-  </nb-layout>
-</form>
+<div fxLayout="row" fxLayout.lt-sm="column" fxFlexFill>
+  <div fxFlex="50">
+    <img src="../../../assets/oomzie.png" class="responsive" />
+  </div>
+  <div class="form-container" fxFlex="50">
+    <form [formGroup]="loginForm" (submit)="submit()">
+      <h1>Log in</h1>
+      <mat-form-field class="form-field full-width" appearance="outline">
+        <mat-label> E-mail </mat-label>
+        <input matInput formControlName="email" required />
+        <mat-error
+          *ngIf="
+            loginForm.controls?.['email']?.touched && loginForm.controls?.['email']?.invalid
+          "
+        >
+          <span *ngIf="loginForm.controls?.['email']?.errors?.['required']"
+            >This field is mandatory.</span
+          >
+          <span *ngIf="loginForm.controls?.['email']?.errors?.['pattern']"
+            >This field is invalid.</span
+          >
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="form-field full-width" appearance="outline">
+        <mat-label> Password </mat-label>
+        <input matInput formControlName="password" type="password" />
+        <mat-error
+          *ngIf="
+            loginForm.controls?.['password']?.touched &&
+            loginForm.controls?.['password']?.invalid
+          "
+        >
+          <span *ngIf="loginForm.controls?.['password']?.errors?.['required']"
+            >This field is mandatory.</span
+          >
+        </mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Log In</button>
+    </form>
+  </div>
+</div>

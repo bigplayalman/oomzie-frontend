@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { MainRoutingModule } from './main-routing.module';
 import { MainComponent } from './main.component';
-import { RouterModule } from '@angular/router';
-import { NbLayoutModule, NbSidebarModule, NbButtonModule, NbSidebarService } from '@nebular/theme';
 
 
 @NgModule({
@@ -14,13 +12,8 @@ import { NbLayoutModule, NbSidebarModule, NbButtonModule, NbSidebarService } fro
   imports: [
     CommonModule,
     MainRoutingModule,
-    RouterModule,
-    NbLayoutModule,
-    NbSidebarModule,
-    NbButtonModule
   ],
   providers: [
-    NbSidebarService
   ]
 })
 export class MainModule { }

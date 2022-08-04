@@ -1,8 +1,8 @@
-.login-inputs-container > * {
-  margin-bottom: 1em;
-  display: block;
-}
-
-.responsive {
-  width: 100%;
+.form-container {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+  form {
+    flex: 1 1 100%;
+  }
 }
