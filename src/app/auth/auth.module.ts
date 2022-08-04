@@ -3,24 +3,24 @@ import { CommonModule } from '@angular/common';
 
 import { AuthRoutingModule } from './auth-routing.module';
 import { AuthComponent } from './auth.component';
-import { NbButtonModule, NbLayoutModule, NbSidebarModule, NbSidebarService } from '@nebular/theme';
-import { RouterModule } from '@angular/router';
-
+import { LoginComponent } from './login/login.component';
+import { NbButtonModule, NbCardModule, NbInputModule, NbLayoutModule } from '@nebular/theme';
 
 @NgModule({
   declarations: [
-    AuthComponent
+    AuthComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,
-    RouterModule,
     AuthRoutingModule,
     NbLayoutModule,
-    NbSidebarModule,
+    NbCardModule,
+    NbInputModule,
     NbButtonModule
   ],
   providers: [
-    NbSidebarService
+
   ]
 })
 export class AuthModule { }
