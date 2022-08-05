@@ -1,6 +1,6 @@
 <div fxLayout="row" fxLayout.lt-sm="column" fxFlexFill>
-  <div fxFlex="50">
-    <img src="../../../assets/oomzie.png" class="responsive" />
+  <div fxFlex="50" fxLayout="row" fxLayoutAlign="center">
+    <img src="../../../assets/oomzie.png" fxFlex="70" />
   </div>
   <div class="form-container" fxFlex="50">
     <form [formGroup]="loginForm" (submit)="submit()">

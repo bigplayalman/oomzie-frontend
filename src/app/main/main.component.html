@@ -1,1 +1,20 @@
-oomzie
+<mat-sidenav-container>
+  <mat-sidenav mode="side" opened>
+    <mat-toolbar>
+      <span>OOMZIE</span>
+    </mat-toolbar>
+    <mat-action-list>
+      <button mat-list-item>
+        <mat-icon matListIcon>library_music</mat-icon>
+        <span matLine>LIBRARY</span>
+      </button>
+      <button mat-list-item>
+        <mat-icon matListIcon>upload_file</mat-icon>
+        <span matLine>UPLOAD</span>
+      </button>
+    </mat-action-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
