@@ -10,7 +10,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
-import {MatTableModule} from '@angular/material/table';
 
 import { MainRoutingModule } from './main-routing.module';
 import { MainComponent } from './main.component';
@@ -20,7 +19,7 @@ import { LibraryComponent } from './components/library/library.component';
 import { TracksComponent } from './components/tracks/tracks.component';
 import { AlbumsComponent } from './components/albums/albums.component';
 import { ArtistsComponent } from './components/artists/artists.component';
-
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -44,7 +43,7 @@ import { ArtistsComponent } from './components/artists/artists.component';
     MatButtonModule,
     MatCardModule,
     MatTabsModule,
-    MatTableModule
+    SharedModule
   ],
   providers: [
     UploadService

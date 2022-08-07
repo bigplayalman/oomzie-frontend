@@ -7,6 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlbumsComponent implements OnInit {
 
+  albums = [
+    {
+      title: 'test album',
+      artists: 'test arist'
+    },
+    {
+      title: 'test album',
+      artists: 'test arist'
+    },
+    {
+      title: 'test album',
+      artists: 'test arist'
+    },
+  ]
   constructor() { }
 
   ngOnInit(): void {

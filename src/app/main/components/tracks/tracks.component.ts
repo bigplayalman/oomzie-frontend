@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tracks.component.scss']
 })
 export class TracksComponent implements OnInit {
-  displayedColumns = ['title', 'album', 'artist', 'duration'];
   tracks = [
     {
       title: 'test title',

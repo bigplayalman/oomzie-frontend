@@ -1,35 +1,3 @@
 <section class="mat-elevation-z8">
-  <mat-table [dataSource]="tracks">
-    <ng-container matColumnDef="title">
-      <mat-header-cell *matHeaderCellDef>Title</mat-header-cell>
-      <mat-cell *matCellDef="let track"> {{ track.title }} </mat-cell>
-    </ng-container>
-
-    <ng-container matColumnDef="album">
-      <mat-header-cell *matHeaderCellDef>Album</mat-header-cell>
-      <mat-cell *matCellDef="let track"> {{ track.album }} </mat-cell>
-    </ng-container>
-
-    <ng-container matColumnDef="artist">
-      <mat-header-cell *matHeaderCellDef> Artist </mat-header-cell>
-      <mat-cell *matCellDef="let track"> {{ track.artist }} </mat-cell>
-    </ng-container>
-
-    <ng-container matColumnDef="duration">
-      <mat-header-cell *matHeaderCellDef>
-        <mat-icon
-          aria-hidden="false"
-          aria-label="Duration"
-          fontIcon="watch_later"
-        >
-        </mat-icon
-      ></mat-header-cell>
-      <mat-cell *matCellDef="let track">
-        {{ track.duration }}
-      </mat-cell>
-    </ng-container>
-
-    <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
-    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-  </mat-table>
+  <app-track-table [tracks]="tracks"></app-track-table>
 </section>

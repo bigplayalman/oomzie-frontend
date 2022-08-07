@@ -1,1 +1,18 @@
-<p>albums works!</p>
+<div fxLayout="row wrap" fxLayoutGap="16px grid">
+  <div
+    fxFlex="15%"
+    fxFlex.xs="50%"
+    fxFlex.sm="33%"
+    *ngFor="let album of albums"
+  >
+    <mat-card>
+      <img mat-card-image src="../../../../assets/oomzie.png" />
+      <mat-card-content>
+        <div class="title">
+          {{ album.title }}
+        </div>
+        {{ album.artists }}
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
