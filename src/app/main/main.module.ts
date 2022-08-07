@@ -8,21 +8,28 @@ import { MatListModule } from '@angular/material/list';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatCardModule } from '@angular/material/card';
+import { MatTabsModule } from '@angular/material/tabs';
+import {MatTableModule} from '@angular/material/table';
 
 import { MainRoutingModule } from './main-routing.module';
 import { MainComponent } from './main.component';
 import { UploadService } from '../services/upload.service';
 import { UploadComponent } from './components/upload/upload.component';
 import { LibraryComponent } from './components/library/library.component';
+import { TracksComponent } from './components/tracks/tracks.component';
+import { AlbumsComponent } from './components/albums/albums.component';
+import { ArtistsComponent } from './components/artists/artists.component';
 
 
 @NgModule({
   declarations: [
     MainComponent,
     UploadComponent,
-    LibraryComponent
+    LibraryComponent,
+    TracksComponent,
+    AlbumsComponent,
+    ArtistsComponent
   ],
   imports: [
     CommonModule,
@@ -36,7 +43,8 @@ import { LibraryComponent } from './components/library/library.component';
     MatProgressBarModule,
     MatButtonModule,
     MatCardModule,
-    MatTabsModule
+    MatTabsModule,
+    MatTableModule
   ],
   providers: [
     UploadService
