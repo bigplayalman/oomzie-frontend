@@ -9,17 +9,20 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+import {MatTabsModule} from '@angular/material/tabs';
 
 import { MainRoutingModule } from './main-routing.module';
 import { MainComponent } from './main.component';
-import { UploadComponent } from './upload/upload.component';
 import { UploadService } from '../services/upload.service';
+import { UploadComponent } from './components/upload/upload.component';
+import { LibraryComponent } from './components/library/library.component';
 
 
 @NgModule({
   declarations: [
     MainComponent,
-    UploadComponent
+    UploadComponent,
+    LibraryComponent
   ],
   imports: [
     CommonModule,
@@ -32,7 +35,8 @@ import { UploadService } from '../services/upload.service';
     MatListModule,
     MatProgressBarModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatTabsModule
   ],
   providers: [
     UploadService
