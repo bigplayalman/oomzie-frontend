@@ -1,0 +1,52 @@
+<input
+  type="file"
+  #file
+  style="display: none"
+  (change)="onFilesAdded()"
+  multiple
+/>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title> Upload Music </mat-card-title>
+    <div fxFlex></div>
+    <div fxLayoutAlign="center center">
+      <button
+        [disabled]="uploading || uploadSuccessful"
+        mat-raised-button
+        color="primary"
+        class="add-files-btn"
+        (click)="addFiles()"
+      >
+        Add Tracks
+      </button>
+    </div>
+  </mat-card-header>
+
+  <!-- This is the content of the dialog, containing a list of the files to upload -->
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let file of files">
+        <h4 mat-line>{{ file.name }}</h4>
+
+        <mat-progress-bar
+          *ngIf="progress"
+          mode="determinate"
+          [value]="progress[file.name].progress | async"
+        ></mat-progress-bar>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+
+  <!-- This are the actions of the dialog, containing the primary and the cancel button-->
+  <mat-card-actions *ngIf="files.size > 0">
+    <button *ngIf="showCancelButton" mat-button mat-dialog-close>Cancel</button>
+    <button
+      mat-raised-button
+      color="primary"
+      [disabled]="!canBeClosed"
+      (click)="UploadFiles()"
+    >
+      {{ primaryButtonText }}
+    </button>
+  </mat-card-actions>
+</mat-card>
