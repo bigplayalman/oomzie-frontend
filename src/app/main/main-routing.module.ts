@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MainComponent } from './main.component';
 import { UploadComponent } from './components/upload/upload.component';
-import { LibraryComponent } from './components/library/library.component';
+import { MainComponent } from './main.component';
 
 const routes: Routes = [
   {
     path: '', component: MainComponent, children: [
       { path: 'upload', component: UploadComponent },
-      { path: 'library', component: LibraryComponent }
+      { path: 'library', loadChildren: () => import('../library/library.module').then(m => m.LibraryModule) },
+      { path: '', redirectTo: 'library', pathMatch: 'full' }
     ]
   },
+
 
 ];
 
