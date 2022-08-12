@@ -1,3 +1,10 @@
-<div class="md-padding">
-test
+<div fxFlex="row">
+  <mat-list>
+    <mat-list-item *ngFor="let artist of artists">
+      <img matListAvatar src="../../../../assets/oomzie.png" class="artist-image"/>
+      <h3 matLine>{{ artist.name }}</h3>
+      <div matLine>{{ artist.songs }}</div>
+      <mat-divider></mat-divider>
+    </mat-list-item>
+  </mat-list>
 </div>
