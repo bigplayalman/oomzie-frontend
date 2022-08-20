@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { forkJoin } from 'rxjs';
-import { UploadService } from '../../../services/upload.service';
+import { UploadService } from '../services/upload.service';
 
 @Component({
   selector: 'app-upload',
